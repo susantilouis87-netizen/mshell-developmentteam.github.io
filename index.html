@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSHELL Central Registry</title>
+    <!-- Mengimpor Font Modern dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --card-bg: #131824;
+            --border-color: #222c40;
+            --text-primary: #f0f3f8;
+            --text-secondary: #8a99ad;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --terminal-bg: #070a10;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 640px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .logo-area {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            background: rgba(52, 211, 153, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            border: 1px solid rgba(52, 211, 153, 0.15);
+            margin-bottom: 32px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-green);
+        }
+
+        /* Desain Konsol Terminal */
+        .terminal {
+            background-color: var(--terminal-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+            overflow-x: auto;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(34, 44, 64, 0.5);
+            padding-bottom: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-r { background-color: #ef4444; }
+        .dot-y { background-color: #f59e0b; }
+        .dot-g { background-color: #10b981; }
+
+        .cmd { color: var(--accent-blue); }
+        .success { color: var(--accent-green); }
+        .comment { color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-area">MSHELL ARCHITECTURE</div>
+        <h1>MSHELL PRO CENTRAL REGISTRY</h1>
+        <p class="subtitle">Infrastruktur Server Paket & Plugin Platform Resmi</p>
+        
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            Registry Online
+        </div>
+
+        <!-- Tampilan Simulasi Terminal -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="dot dot-r"></div>
+                <div class="dot dot-y"></div>
+                <div class="dot dot-g"></div>
+            </div>
+            <div><span class="comment"># Memuat manager repositori jarak jauh...</span></div>
+            <div>mshell&gt; <span class="cmd">plugin install builtin_tools</span></div>
+            <div>[<span class="success">+</span>] Menghubungkan ke remote registry... Sukses.</div>
+            <div>[<span class="success">+</span>] Mengunduh manifes komponen dari github.io...</div>
+            <div>[<span class="success">+</span>] Memasang perintah: sysinfo, fcalc.</div>
+            <div><span class="success">Proses selesai. Struktur modular siap digunakan!</span></div>
+        </div>
+    </div>
+
+</body>
+</html>

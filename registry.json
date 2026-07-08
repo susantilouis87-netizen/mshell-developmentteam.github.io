@@ -1,0 +1,13 @@
+{
+  "name": "MSHELL Official Plugin Registry",
+  "last_updated": "2026-07-08",
+  "plugins": {
+    "builtin_tools": {
+      "version": "1.0.0",
+      "author": "Louis",
+      "description": "Kumpulan perkakas bawaan tambahan untuk optimalisasi sistem.",
+      "download_url": "https://mshell-developmentteam.github.io/plugins/builtin_tools.zip",
+      "commands": ["sysinfo", "fcalc"]
+    }
+  }
+}
